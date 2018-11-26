@@ -109,10 +109,7 @@ class TikTorchLazyflowClassifierFactory(LazyflowPixelwiseClassifierFactoryABC):
         return numpy.inf
 
     def __eq__(self, other):
-        return (isinstance(other, type(self)) and
-                self._args == other._args and
-                self._kwargs == other._kwargs
-        )
+        return (isinstance(other, type(self)))
 
     def __ne__(self, other):
         return not self.__eq__(other)
